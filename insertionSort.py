@@ -13,12 +13,12 @@ def insertionSort(arr):
         arr[j + 1] = key
 
 
-arr = open('dados/dados100_mil.txt').read().split(", ")
+arr = open('dados/dados100milpior.txt').read().split(", ")
 
 insertionSort(arr)
 end = datetime.now()
 
-arquivo = open('arquivosCriados/insertionSort100milII.txt', 'x')
+arquivo = open('arquivosCriados/insertionSortPior100mil', 'x')
 arquivo.write("Bruno Batista Ferreira\n")
 arquivo.write("InsertionSort")
 tempo = str(end - start)
@@ -29,4 +29,4 @@ arquivo.write("\n")
 for i in range(len(arr)):
     arquivo.write(arr[i] + ",")
 
-# pior caso 100 mil - pt3
+# pior caso 100 mil - pt3\\\\\

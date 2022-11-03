@@ -1,0 +1,6 @@
+Bruno Batista Ferreira
+SelectionSort
+Comparacoes: 8
+Movimentacoes: 10
+0:00:00.000998
+-13805, 3724, 3945, 16190, 5371, 

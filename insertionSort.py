@@ -13,7 +13,7 @@ def insertionSort(arr):
         arr[j + 1] = key
 
 
-arr = open('dados/dados100milpior.txt').read().split(", ")
+arr = open('/dados/dados5.txt').read().split(", ")
 
 insertionSort(arr)
 end = datetime.now()
@@ -29,4 +29,3 @@ arquivo.write("\n")
 for i in range(len(arr)):
     arquivo.write(arr[i] + ",")
 
-# pior caso 100 mil - pt3\\\\\

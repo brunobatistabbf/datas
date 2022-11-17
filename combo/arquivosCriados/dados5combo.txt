@@ -1,0 +1,6 @@
+Bruno Batista Ferreira
+Combo Sort
+Comparacoes: 19
+Movimentacoes: 3
+0:00:00.000999
+-13805, 3724, 3945, 5371, 16190, 

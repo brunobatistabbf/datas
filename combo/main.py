@@ -8,7 +8,7 @@ comparacoes = 0
 start = datetime.now()
 
 def dados():
-    arquivo = "dadosBubble/dados500_mil.txt"
+    arquivo = "dadosComb/dados500_mil.txt"
     with open(arquivo, "r") as arquivos:
         organizar = arquivos.read().replace(" ", "").replace("[", "").replace("]", "").split(",")
         dados = list(map(int, organizar))
@@ -20,7 +20,7 @@ array, movimentacoes, comparacoes = combsort(arr, movimentacoes, comparacoes)
 
 end = datetime.now()
 
-arquivo = open('arquivos_criados/dados500milbubble.txt', 'x')
+arquivo = open('arquivosCriados/dados500milcombo.txt', 'x')
 arquivo.write("Bruno Batista Ferreira\n")
 arquivo.write("Combo Sort")
 tempo = str(end - start)

@@ -1,0 +1,6 @@
+Bruno Batista Ferreira
+Bogo Sort
+Comparacoes: 54
+Movimentacoes: 53
+0:00:00
+-13805, 3724, 3945, 5371, 16190,

@@ -1,0 +1,4 @@
+Bruno Batista Ferreira
+Quick Sort
+0:00:00.001001
+-13805, 3724, 3945, 5371, 16190, 

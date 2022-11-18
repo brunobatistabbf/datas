@@ -1,22 +1,22 @@
-def quickSort(array, movimentacoes, comparacoes):
-    fim = None
-    inicio = 0
-    if fim is None:
-        fim = len(array) - 1
 
-    if inicio < fim:
-        p = partition(array, inicio, fim)
-        quickSort(array, inicio, p-1)
-        quickSort(array, p+1, fim)
+def quickSort(sequence):
+    length = len(sequence)
+    if length <= 1:
+        return sequence
+    #porque só tem um elemento
+    else:
+        pivot = sequence.pop()
 
-    return array, movimentacoes, comparacoes
+    #pop pega o ultimo elemento e o retorna
+    items_greater = []
+    items_lower = []
 
-def partition(array, inicio, fim ):
-    pivot = array[fim]
-    i = inicio
-    for j in range(inicio, fim):
-        if array[j] <= pivot:
-            array[j], array[i] = array[i], array[j]
-            i = i + 1
-    array[i], array[fim] = array[fim], array[i]
-    return  i
+    for item in sequence:
+        if item > pivot:
+            items_greater.append(item)
+        else:
+            items_lower.append(item)
+
+    return quickSort(items_lower) + [pivot] + quickSort(items_greater)
+
+

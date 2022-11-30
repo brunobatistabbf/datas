@@ -1,0 +1,6 @@
+Bruno Batista Ferreira
+Counting Sort
+Comparacoes: 30012
+Movimentacoes: 30017
+0:00:00.018999
+-13805, 3724, 3945, 5371, 16190, 

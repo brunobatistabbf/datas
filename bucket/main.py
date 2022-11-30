@@ -8,7 +8,7 @@ comparacoes = 0
 start = datetime.now()
 
 def dados():
-    arquivo = "dadosBucket/dados500_mil.txt"
+    arquivo = "dadosBucket/dados5.txt"
     with open(arquivo, "r") as arquivos:
         organizar = arquivos.read().replace(" ", "").replace("[", "").replace("]", "").split(",")
         dados = list(map(int, organizar))
@@ -16,22 +16,22 @@ def dados():
 
 arr = dados()
 
-array, movimentacoes, comparacoes = bucketSort(arr, movimentacoes, comparacoes)
+array = bucketSort(arr)
 
 end = datetime.now()
 
-arquivo = open('arquivosCriados/dados500MilGnome.txt', 'x')
+arquivo = open('arquivosCriados/dados5Bucket.txt', 'x')
 arquivo.write("Bruno Batista Ferreira\n")
 arquivo.write("Bucket Sort")
 tempo = str(end - start)
 arquivo.write("\n")
 arquivo.write("Comparacoes: ")
-comparacoesStr = str(comparacoes)
-arquivo.write(comparacoesStr)
+#comparacoesStr = str(comparacoes)
+#arquivo.write(comparacoesStr)
 arquivo.write("\n")
-movimentacoesStr = str(movimentacoes)
+#movimentacoesStr = str(movimentacoes)
 arquivo.write("Movimentacoes: ")
-arquivo.write(movimentacoesStr)
+#arquivo.write(movimentacoesStr)
 arquivo.write("\n")
 arquivo.write(tempo)
 arquivo.write("\n")

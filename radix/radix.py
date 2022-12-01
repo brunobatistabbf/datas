@@ -1,29 +1,74 @@
-def countingSort(arr, exp1):
-    n = len(arr)
-    output = [0] * (n)
-    count = [0] * (10)
+from datetime import datetime
 
-    for i in range(0, n):
-        index = arr[i] // exp1
-        count[index % 10] += 1
+movimentacoes = 0
+def countingSort(arr):
+    movimentacoes = 0
+    max_element = int(max(arr))
+    min_element = int(min(arr))
+    range_of_elements = max_element - min_element + 1
 
-    for i in range(1, 10):
-        count[i] += count[i - 1]
+    count_arr = [0 for _ in range(range_of_elements)]
 
-    i = n - 1
-    while i >= 0:
-        index = arr[i] // exp1
-        output[count[index % 10] - 1] = arr[i]
-        count[index % 10] -= 1
-        i -= 1
+    output_arr = [0 for _ in range(len(arr))]
 
-    i = 0
+
     for i in range(0, len(arr)):
-        arr[i] = output[i]
+        movimentacoes = movimentacoes + 1
+        count_arr[arr[i] - min_element] += 1
 
-def radixSort(arr):
-    max1 = max(arr)
-    exp = 1
-    while max1 / exp >= 1:
-        countingSort(arr, exp)
-        exp *= 10
+
+    for i in range(1, len(count_arr)):
+        movimentacoes = movimentacoes + 1
+        count_arr[i] += count_arr[i - 1]
+
+    for i in range(len(arr) - 1, -1, -1):
+        movimentacoes = movimentacoes + 1
+        output_arr[count_arr[arr[i] - min_element] - 1] = arr[i]
+        count_arr[arr[i] - min_element] -= 1
+
+    for i in range(0, len(arr)):
+        movimentacoes = movimentacoes + 1
+        arr[i] = output_arr[i]
+
+    return  movimentacoes
+def radixSort(arr, movimentacoes):
+
+	max1 = max(arr)
+
+	exp = 1
+	while max1 / exp >= 1:
+		movimentacoes = countingSort(arr)
+		exp *= 10
+
+
+
+
+start = datetime.now()
+
+def dados():
+    arquivo = "dadosRadix/dados5.txt"
+    with open(arquivo, "r") as arquivos:
+        organizar = arquivos.read().replace(" ", "").replace("[", "").replace("]", "").split(",")
+        dados = list(map(int, organizar))
+    return dados
+
+arr = dados()
+
+radixSort(arr, movimentacoes)
+
+end = datetime.now()
+
+arquivo = open('arquvosCriados/dados5RadixOK.txt', 'x')
+arquivo.write("Bruno Batista Ferreira\n")
+arquivo.write("Radix Sort")
+tempo = str(end - start)
+arquivo.write("\n")
+#movimentacoesStr = str(movimentacoes)
+arquivo.write("Movimentacoes: ")
+#arquivo.write(movimentacoesStr)
+arquivo.write("\n")
+arquivo.write(tempo)
+arquivo.write("\n")
+
+for i in range(len(arr)):
+    arquivo.write(str(arr[i]) + ", ")

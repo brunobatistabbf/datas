@@ -46,7 +46,7 @@ def radixSort(arr, movimentacoes):
 start = datetime.now()
 
 def dados():
-    arquivo = "dadosRadix/dados5.txt"
+    arquivo = "dadosRadix/dados10_mil.txt"
     with open(arquivo, "r") as arquivos:
         organizar = arquivos.read().replace(" ", "").replace("[", "").replace("]", "").split(",")
         dados = list(map(int, organizar))
@@ -58,14 +58,10 @@ radixSort(arr, movimentacoes)
 
 end = datetime.now()
 
-arquivo = open('arquvosCriados/dados5RadixOK.txt', 'x')
+arquivo = open('arquvosCriados/dados10milRadix.txt', 'x')
 arquivo.write("Bruno Batista Ferreira\n")
 arquivo.write("Radix Sort")
 tempo = str(end - start)
-arquivo.write("\n")
-#movimentacoesStr = str(movimentacoes)
-arquivo.write("Movimentacoes: ")
-#arquivo.write(movimentacoesStr)
 arquivo.write("\n")
 arquivo.write(tempo)
 arquivo.write("\n")

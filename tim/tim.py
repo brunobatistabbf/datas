@@ -49,12 +49,15 @@ def merge(arr, l, m, r):
 
 
 def timSort(arr, movimentacoes, comparacoes):
+    comparacoes = 0
+    movimentacoes = 0
     n = len(arr)
     minRun = calcMinRun(n)
 
     for start in range(0, n, minRun):
         end = min(start + minRun - 1, n - 1)
         insertionSort(arr, start, end)
+        movimentacoes = movimentacoes + 1
 
     size = minRun
     while size < n:

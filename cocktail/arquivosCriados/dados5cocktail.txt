@@ -1,0 +1,6 @@
+Bruno Batista Ferreira
+Cocktail Sort
+Comparacoes: 9
+Movimentacoes: 5
+0:00:00
+-13805, 3724, 3945, 5371, 16190, 

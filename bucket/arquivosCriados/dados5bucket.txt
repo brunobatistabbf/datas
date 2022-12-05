@@ -1,0 +1,6 @@
+Bruno Batista Ferreira
+Bucket Sort
+Comparacoes: 5
+Movimentacoes: 15
+0:00:00.001000
+-13805, 3724, 3945, 5371, 16190, 

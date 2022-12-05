@@ -8,7 +8,7 @@ comparacoes = 0
 start = datetime.now()
 
 def dados():
-    arquivo = "dadosTim/dados5.txt"
+    arquivo = "dadosTim/dados500_mil.txt"
     with open(arquivo, "r") as arquivos:
         organizar = arquivos.read().replace(" ", "").replace("[", "").replace("]", "").split(",")
         dados = list(map(int, organizar))
@@ -20,7 +20,7 @@ array, movimentacoes, comparacoes = timSort(arr, movimentacoes, comparacoes)
 
 end = datetime.now()
 
-arquivo = open('arquivosCriados/dados5Tim.txt', 'x')
+arquivo = open('arquivosCriados/dados500MilTim.txt', 'x')
 arquivo.write("Bruno Batista Ferreira\n")
 arquivo.write("Tim Sort")
 tempo = str(end - start)

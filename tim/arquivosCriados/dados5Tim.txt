@@ -1,0 +1,6 @@
+Bruno Batista Ferreira
+Tim Sort
+Comparacoes: 0
+Movimentacoes: 1
+0:00:00.007000
+-13805, 3724, 3945, 5371, 16190, 
